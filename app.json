@@ -1,0 +1,7 @@
+{
+  "name": "ping-pong-bot",
+  "description": "A bot to ping site periodically to keep it alive on heroku",
+  "repository": "https://github.com/patheticGeek/ping-pong-bot",
+  "keywords": ["ping", "pong", "bot", "heroku", "keep", "alive"],
+  "builpacks": [{ "url": "heroku/nodejs" }]
+}

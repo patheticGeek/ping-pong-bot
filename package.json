@@ -1,0 +1,33 @@
+{
+  "name": "ping-pong-bot",
+  "version": "1.0.0",
+  "description": "A bot to ping site periodically to keep it alive on heroku",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patheticGeek/ping-pong-bot.git"
+  },
+  "keywords": [
+    "ping",
+    "pong",
+    "bot",
+    "heroku",
+    "keep",
+    "alive"
+  ],
+  "author": "pathetic_geek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patheticGeek/ping-pong-bot/issues"
+  },
+  "homepage": "https://github.com/patheticGeek/ping-pong-bot#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  }
+}
