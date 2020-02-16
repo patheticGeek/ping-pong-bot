@@ -8,7 +8,19 @@ const server = express();
 
 (async () => {
   server.get("/", (req, res) => {
-    res.send("Send your query here: /pingback?link=https://example.com");
+    const link = req.query.link ? req.query.link.trim() : null;
+    let toSend;
+    if (!link || link === "") {
+      toSend = "Send your query here: /pingback?link=https://example.com";
+    } else {
+      const resp = await axios.get(link);
+      toSend = {
+        error: false,
+        message: `URL: ${resp.config.url}, Status: ${resp.status}, Status Text: ${resp.statusText}`
+      };
+    }
+    console.log(toSend);
+    res.send(toSend);
   });
 
   server.get("/ping", (req, res) => {
