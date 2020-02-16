@@ -7,7 +7,7 @@ const PORT = parseInt(process.env.PORT, 10) || 3000;
 const server = express();
 
 (async () => {
-  server.get("/", (req, res) => {
+  server.get("/", async (req, res) => {
     const link = req.query.link ? req.query.link.trim() : null;
     let toSend;
     if (!link || link === "") {
